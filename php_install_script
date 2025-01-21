@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Skript kontrollib, kas PHP on paigaldatud ja paigaldab vajadusel vajalikud paketid
+#
+# Kontrollib, kas PHP on paigaldatud
+PHP=$(dpkg-query -W -f='${status}' php 2>/dev/null | grep -c 'ok installed')
+
+# Kui PHP ei ole paigaldatud
+if [ $PHP -eq 0 ]; then
+    # Paigaldab PHP ja vajalikud paketid veebiserveri jaoks
+    echo -e "\nPaigaldan PHP ja vajalikud paketid: php, libapache2-mod-php, php-mysql\n"
+    sudo apt update
+    sudo apt install php libapache2-mod-php php-mysql -y
+    echo -e "\nPHP ja vajalikud paketid on paigaldatud\n"
+    
+    # Kontrollime, kas Apache2 teenus töötab, ja vajadusel käivitame
+    echo -e "\nKontrollime, kas Apache2 teenus töötab..."
+    sudo systemctl restart apache2
+    sudo systemctl enable apache2
+    echo -e "\nApache2 teenus on käivitatud\n"
+    
+# Kui PHP on juba paigaldatud
+elif [ $PHP -eq 1 ]; then
+    # Kuvab PHP versiooni ja asukoha
+    echo -e "\nPHP on juba paigaldatud\n"
+    which php
+    php -v
+fi
