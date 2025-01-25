@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Väljastab esimese 20 täisarvu kohta,
+# kas see on algarv või mitte
+for (( arv=1; arv<=20; arv++ ))
+do
+    if [ $arv -le 1 ];then
+        printf "%s$arv - ei ole algarv\n"
+    else
+        jagaja=2
+        jaak=$(($arv % $jagaja))
+        while [ $jaak -ne 0 ]
+        do
+            jagaja=$(($jagaja + 1))
+            jaak=$(($arv % $jagaja))
+        done
+        if [ $jagaja -eq $arv ];then
+            printf "$arv - on algarv\n"
+        else
+            printf "%s$arv - ei ole algarv\n"
+        fi
+    fi
+done
