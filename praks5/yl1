@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Küsib kasutajalt vanust ning väljastab
+# vanuse kohta kirjelduse
+read -p "Sisesta (oma) vanus: " vanus
+
+if [ $vanus -gt 0 -a $vanus -lt 11 ];then
+    printf "Oled laps\n"
+elif [ $vanus -ge 11 -a $vanus -lt 18 ];then
+    printf "Oled nooruk\n"
+elif [ $vanus -ge 18 -a $vanus -lt 63 ];then
+    printf "Oled täiskasvanu\n"
+elif [ $vanus -ge 63 ];then
+    printf "Oled seenjor\n"
+else
+    printf "Vigane sisend\n"
+fi
