@@ -1,0 +1,10 @@
+# Skript: practise8.ps1
+# Funktsioon, mis liidab kaks numbrit
+
+function Liida {
+    param($a, $b)
+    return $a + $b
+}
+
+$summa = Liida 10 20
+Write-Host "Summa: $summa"

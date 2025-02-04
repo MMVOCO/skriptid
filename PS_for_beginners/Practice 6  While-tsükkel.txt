@@ -1,0 +1,8 @@
+# Skript: practise6.ps1
+# While-tsükkel kuvab numbrid 1 kuni 5
+
+$i = 1
+while ($i -le 5) {
+    Write-Host "Number: $i"
+    $i++
+}

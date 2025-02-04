@@ -1,0 +1,6 @@
+# Skript: practise10.ps1
+# Kirjutame faili
+
+$failiTee = "C:\Users\marek\skriptid\PowerShell for Beginners\practise\fail.txt"
+"See on testfail" | Out-File -FilePath $failiTee
+Write-Host "Fail on salvestatud!"

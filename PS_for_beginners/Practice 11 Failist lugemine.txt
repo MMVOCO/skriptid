@@ -1,0 +1,6 @@
+# Skript: practise11.ps1
+# Loeb failist andmeid
+
+$failiTee = "C:\Users\marek\skriptid\PowerShell for Beginners\practise\fail.txt"
+$sisu = Get-Content -Path $failiTee
+Write-Host "Faili sisu: $sisu"

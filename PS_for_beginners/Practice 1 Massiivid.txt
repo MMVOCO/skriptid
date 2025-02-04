@@ -1,0 +1,11 @@
+# Skript: practise1.ps1
+# See skript loob kaks massiivi ja liidab vastavad väärtused
+$massiiv1 = @(1, 2, 3)
+$massiiv2 = @(4, 5, 6)
+
+$massiiv3 = @()
+for ($i = 0; $i -lt $massiiv1.Count; $i++) {
+    $massiiv3 += $massiiv1[$i] + $massiiv2[$i]
+}
+
+Write-Host "Tulemuseks olev massiiv: $massiiv3" -ForegroundColor Green

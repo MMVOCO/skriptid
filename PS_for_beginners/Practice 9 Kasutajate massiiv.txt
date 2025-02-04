@@ -1,0 +1,8 @@
+# Skript: practise9.ps1
+# Loome massiivi nimedega ja kuvame need
+
+$nimed = @("Karl", "Mari", "Ahto")
+
+foreach ($nimi in $nimed) {
+    Write-Host "Kasutaja: $nimi"
+}

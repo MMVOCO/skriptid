@@ -1,0 +1,5 @@
+# Skript: practise3.ps1
+# Küsim kasutajalt nime ja kuvame vastuse rohelises värvis
+
+$nimi = Read-Host "Mis on sinu nimi?"
+Write-Host "Minu nimi on: $nimi" -ForegroundColor Green

@@ -1,0 +1,6 @@
+# Skript: practise5.ps1
+# Kuvab numbrid 1 kuni 10
+
+for ($i = 1; $i -le 10; $i++) {
+    Write-Host $i
+}

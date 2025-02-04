@@ -1,0 +1,4 @@
+# Skript: practise12.ps1
+# Kuvab lokaalsed kasutajagrupid
+
+Get-LocalGroup

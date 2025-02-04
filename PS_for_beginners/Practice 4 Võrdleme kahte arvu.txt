@@ -1,0 +1,11 @@
+# Skript: practise4.ps1
+# Küsim kasutajalt kaks numbrit ja leiame suurema
+
+$number1 = Read-Host "Sisesta esimene number"
+$number2 = Read-Host "Sisesta teine number"
+
+if ($number1 -gt $number2) {
+    Write-Host "Suurem number on: $number1"
+} else {
+    Write-Host "Suurem number on: $number2"
+}

@@ -1,0 +1,22 @@
+# Skript: practise2.ps1
+# Loome kaks hash'tabelit ja arvutame palga
+
+$tootajad = @{
+    "Karl" = 12
+    "Mari" = 20
+    "Ahto" = 18
+}
+
+$paevapalk = @{
+    "Karl" = 100
+    "Mari" = 120
+    "Ahto" = 150
+}
+
+$palk = @{}
+foreach ($nimi in $tootajad.Keys) {
+    $palk[$nimi] = $tootajad[$nimi] * $paevapalk[$nimi]
+}
+
+# Kuvame tulemuse
+$palk

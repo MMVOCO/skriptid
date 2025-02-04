@@ -1,0 +1,8 @@
+# Skript: practise13.ps1
+# Loob uue lokaalse kasutaja
+
+$kasutajaNimi = "uus_kasutaja"
+$parool = ConvertTo-SecureString "Parool1!" -AsPlainText -Force
+
+New-LocalUser -Name $kasutajaNimi -Password $parool -FullName "Test Kasutaja" -Description "Automaatne kasutaja"
+Write-Host "Kasutaja '$kasutajaNimi' on lisatud!"

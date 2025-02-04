@@ -1,0 +1,12 @@
+# Skript: practise7.ps1
+# Küsime kasutajalt numbrit ja anname tagasiside
+
+$nr = Read-Host "Sisesta number"
+
+if ($nr -gt 0) {
+    Write-Host "See on positiivne number"
+} elseif ($nr -lt 0) {
+    Write-Host "See on negatiivne number"
+} else {
+    Write-Host "See on null"
+}
